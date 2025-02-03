@@ -53,3 +53,9 @@ def analyze_and_report(results):
 sap_data = connect_to_sap_database()
 audit_report = internal_audit_algorithm(sap_data)
 
+## Train {# Simplified causal discovery from SAP data
+from causalnex.structure import DAGRegressor
+model = DAGRegressor()
+model.fit(X_sap_data)  # X = vendor attributes, payment timestamps, etc.
+print(model.edges_)    # Output: [(Vendor_Duplicates, Overpayment), ...]}
+    
