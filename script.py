@@ -2,8 +2,10 @@ def internal_audit_algorithm(sap_data):
     # Step 1: Data Extraction and Preparation
     cleaned_data = extract_and_clean_sap_data(sap_data)
     
+    
     # Step 2: Hypothesis Generation
     hypotheses = generate_hypotheses(cleaned_data)
+    
     
     # Step 3: Hypothesis Prioritization
     prioritized_hypotheses = prioritize_hypotheses(hypotheses)
